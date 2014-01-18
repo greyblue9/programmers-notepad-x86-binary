@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+
+<!-- Programmers Notepad scheme for the Motorola 68000 cpu -->
+<!-- actually all mnemnonics of the 68000, no fpu, no mmu and none of the later cpu's -->
+<!-- preprocessor definitions for PhxAss -->
+
+<Scheme>
+	<keyword-classes>
+		<keyword-class name="keywords1">
+abs acos asc asin atan autotrim blockinput break ceil chr click clipwait continue control controlclick controlfocus controlget controlgetfocus controlgetpos controlgettext controlmove controlsend controlsendraw controlsettext coordmode cos critical detecthiddentext detecthiddenwindows dllcall drive driveget drivespacefree edit else envadd envdiv envget envmult envset envsub envupdate exit exitapp exp fileappend filecopy filecopydir filecreatedir filecreateshortcut filedelete fileexist filegetattrib filegetshortcut filegetsize filegettime filegetversion fileinstall filemove filemovedir fileread filereadline filerecycle filerecycleempty fileremovedir fileselectfile fileselectfolder filesetattrib filesettime floor formattime getkeystate gosub goto groupactivate groupadd groupclose groupdeactivate gui guicontrol guicontrolget hotkey if ifequal ifexist ifgreater ifgreaterorequal ifinstring ifless iflessorequal ifmsgbox ifnotequal ifnotexist ifnotinstring ifwinactive ifwinexist ifwinnotactive ifwinnotexist il_add il_create il_destroy imagesearch inidelete iniread iniwrite input inputbox instr isfunc islabel keyhistory keywait listhotkeys listlines listvars log loop lv_add lv_delete lv_deletecol lv_getcount lv_getnext lv_gettext lv_insert lv_insertcol lv_modify lv_modifycol lv_setimagelist menu mod mouseclick mouseclickdrag mousegetpos mousemove msgbox numget numput onexit onmessage outputdebug pause pixelgetcolor pixelsearch postmessage process progress random regdelete regexmatch regexreplace registercallback regread regwrite reload repeat return round run runas runwait sb_seticon sb_setparts sb_settext send sendevent sendinput sendmessage sendmode sendplay sendraw setbatchlines setcapslockstate setcontroldelay setdefaultmousespeed setenv setformat setkeydelay setmousedelay setnumlockstate setscrolllockstate setstorecapslockmode settimer settitlematchmode setwindelay setworkingdir shutdown sin sleep sort soundbeep soundget soundgetwavevolume soundplay soundset soundsetwavevolume splashimage splashtextoff splashtexton splitpath sqrt statusbargettext statusbarwait stringcasesense stringgetpos stringleft stringlen stringlower stringmid stringreplace stringright stringsplit stringtrimleft stringtrimright stringupper strlen substr suspend sysget tan thread tooltip transform traytip tv_add tv_delete tv_get tv_getchild tv_getcount tv_getnext tv_getparent tv_getprev tv_getselection tv_gettext tv_modify urldownloadtofile varsetcapacity while winactivate winactivatebottom winactive winclose winexist winget wingetactivestats wingetactivetitle wingetclass wingetpos wingettext wingettitle winhide winkill winmaximize winmenuselectitem winminimize winminimizeall winminimizeallundo winmove winrestore winset winsettitle winshow winwait winwaitactive winwaitclose winwaitnotactive
+		</keyword-class>
+		<keyword-class name="keywords2">
+abort abovenormal  add ahk_class ahk_group ahk_id ahk_pid all alnum alpha altsubmit alttab alttabandmenu alttabmenu alttabmenudismiss alwaysontop and autosize background backgroundtrans belownormal between bitand bitnot bitor bitshiftleft bitshiftright bitxor bold border bottom button buttons byref cancel capacity caption center check3 check checkbox checked checkedgray choose10 choose11 choose12 choose13 choose14 choose15 choose16 choose17 choose18 choose19 choose1 choose20 choose21 choose22 choose23 choose24 choose25 choose26 choose27 choose28 choose29 choose2 choose30 choose31 choose32 choose33 choose34 choose35 choose36 choose37 choose38 choose39 choose3 choose40 choose41 choose42 choose43 choose44 choose45 choose46 choose47 choose48 choose49 choose4 choose50 choose51 choose52 choose53 choose54 choose55 choose56 choose57 choose58 choose59 choose5 choose60 choose61 choose62 choose63 choose64 choose65 choose66 choose67 choose68 choose69 choose6 choose70 choose71 choose72 choose73 choose74 choose75 choose76 choose77 choose78 choose79 choose7 choose80 choose81 choose82 choose83 choose84 choose85 choose86 choose87 choose88 choose89 choose8 choose90 choose91 choose92 choose93 choose94 choose95 choose96 choose97 choose98 choose99 choose9 choose choosestring  close color combobox contains controllist count date datetime days ddl default delete deleteall delimiter deref destroy digit disable disabled dropdownlist eject enable enabled error exist expand exstyle filesystem first flash float floatfast focus font global grid group groupbox guiclose guicontextmenu guidropfiles guiescape guisize hdr hidden hide high hkcc hkcr hkcu hkey_classes_root hkey_current_config hkey_current_user hkey_local_machine hkey_users hklm hku hours hscroll icon iconsmall id idlast ignore imagelist in integer integerfast interrupt is italic join label lastfound lastfoundexist left limit1 limit2 limit3 limit4 limit5 limit6 limit7 limit8 limit9 limit lines list listbox listview ln local lock logoff low lower lowercase ltrim mainwindow margin maximize maximizebox maxsize minimize minimizebox minmax minsize minutes monthcal mouse move multi na no noactivate nodefault nohide noicon nomainwindow norm normal nosort nosorthdr nostandard not notab notimers number off ok on or owndialogs owner10 owner11 owner12 owner13 owner14 owner15 owner16 owner17 owner18 owner19 owner1 owner20 owner21 owner22 owner23 owner24 owner25 owner26 owner27 owner28 owner29 owner2 owner30 owner31 owner32 owner33 owner34 owner35 owner36 owner37 owner38 owner39 owner3 owner40 owner41 owner42 owner43 owner44 owner45 owner46 owner47 owner48 owner49 owner4 owner50 owner51 owner52 owner53 owner54 owner55 owner56 owner57 owner58 owner59 owner5 owner60 owner61 owner62 owner63 owner64 owner65 owner66 owner67 owner68 owner69 owner6 owner70 owner71 owner72 owner73 owner74 owner75 owner76 owner77 owner78 owner79 owner7 owner80 owner81 owner82 owner83 owner84 owner85 owner86 owner87 owner88 owner89 owner8 owner90 owner91 owner92 owner93 owner94 owner95 owner96 owner97 owner98 owner99 owner9 owner parse password pic picture pixel pos pow priority processname radio range read readonly realtime redraw reg_binary reg_dword reg_expand_sz reg_multi_sz reg_sz region relative rename report resize restore retry rgb right rtrim screen seconds section serial setlabel shiftalttab show single slider sortdesc standard static status statusbar statuscd strike style submit sysmenu tab2 tab tabstop text theme tile time tip togglecheck toggleenable toolwindow top topmost transcolor transparent tray treeview tryagain type uncheck underline unicode unlock updown upper uppercase useerrorlevel vis visfirst visible vscroll wait waitclose wantctrla wantf2 wantreturn wrap xdigit xm xp xs yes ym yp ys
+		</keyword-class>
+
+		<keyword-class name="keywords3">
+a_ahkpath a_ahkversion a_appdata a_appdatacommon a_autotrim a_batchlines a_caretx a_carety a_computername a_controldelay a_cursor a_dd a_ddd a_dddd a_defaultmousespeed a_desktop a_desktopcommon a_detecthiddentext a_detecthiddenwindows a_endchar a_eventinfo a_exitreason a_formatfloat a_formatinteger a_gui a_guicontrol a_guicontrolevent a_guievent a_guiheight a_guiwidth a_guix a_guiy a_hour a_iconfile a_iconhidden a_iconnumber a_icontip a_index a_ipaddress1 a_ipaddress2 a_ipaddress3 a_ipaddress4 a_isadmin a_iscompiled a_iscritical a_ispaused a_issuspended a_keydelay a_language a_lasterror a_linefile a_linenumber a_loopfield a_loopfileattrib a_loopfiledir a_loopfileext a_loopfilefullpath a_loopfilelongpath a_loopfilename a_loopfileshortname a_loopfileshortpath a_loopfilesize a_loopfilesizekb a_loopfilesizemb a_loopfiletimeaccessed a_loopfiletimecreated a_loopfiletimemodified a_loopreadline a_loopregkey a_loopregname a_loopregsubkey a_loopregtimemodified a_loopregtype a_mday a_min a_mm a_mmm a_mmmm a_mon a_mousedelay a_msec a_mydocuments a_now a_nowutc a_numbatchlines a_ostype a_osversion a_priorhotkey a_programfiles a_programs a_programscommon a_screenheight a_screenwidth a_scriptdir a_scriptfullpath a_scriptname a_sec a_space a_startmenu a_startmenucommon a_startup a_startupcommon a_stringcasesense a_tab a_temp a_thisfunc a_thishotkey a_thislabel a_thismenu a_thismenuitem a_thismenuitempos a_tickcount a_timeidle a_timeidlephysical a_timesincepriorhotkey a_timesincethishotkey a_titlematchmode a_titlematchmodespeed a_username a_wday a_windelay a_windir a_workingdir a_yday a_year a_yweek a_yyyy clipboard clipboardall comspec errorlevel false programfiles true
+		</keyword-class>
+		<keyword-class name="keywords4">
+alt altdown altup appskey backspace bs capslock ctrl ctrlbreak ctrldown ctrlup del down end enter esc escape f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f1 f20 f21 f22 f23 f24 f2 f3 f4 f5 f6 f7 f8 f9 home ins insert joy10 joy11 joy12 joy13 joy14 joy15 joy16 joy17 joy18 joy19 joy1 joy20 joy21 joy22 joy23 joy24 joy25 joy26 joy27 joy28 joy29 joy2 joy30 joy31 joy32 joy3 joy4 joy5 joy6 joy7 joy8 joy9 joyaxes joybuttons joyinfo joyname joypov joyr joyu joyv joyx joyy joyz lalt lbutton lcontrol lctrl  lshift lwin lwindown lwinup mbutton numlock numpad0 numpad1 numpad2 numpad3 numpad4 numpad5 numpad6 numpad7 numpad8 numpad9 numpadadd numpadclear numpaddel numpaddiv numpaddot numpaddown numpadend numpadenter numpadhome numpadins numpadleft numpadmult numpadpgdn numpadpgup numpadright numpadsub numpadup pgdn pgup printscreen ralt rbutton rcontrol rctrl rshift rwin rwindown rwinup scrolllock shift shiftdown shiftup space up wheeldown wheelleft wheelright wheelup xbutton1 xbutton2
+		</keyword-class>
+	</keyword-classes>
+
+	<schemedef name="ahk" title="Autohotkey" author="Rainer Friebel" url="http://www.pnotepad.org/" version="1"
+		casesensitive="false" braces="[()]">
+
+		<!-- Max 2 -->
+		<strings>
+			<!-- Double quotes string, with \ as an escape character. -->
+			<stringtype id="0" start="&quot;" end="&quot;" multiline="false" />
+			<stringtype id="1" start="'" end="'" multiline="false" />
+		</strings>
+
+		<identifiers start="[a-zA-Z]" />
+	<!--	<identifiers2 start="[:]" content="[-_a-zA-Z0-9]" />
+		 <identifiers start="[a-zA-Z]" />  -->
+
+
+		<comments>
+			<line start=";" />
+		</comments>
+
+		<numbers start="[0-9]" content="[0-9]" />
+
+		<!-- From here on is the traditional scheme definition block... -->
+		<lexer name="ahk" />
+		<use-styles>
+			<style name="Default" key="32" />
+			<style name="Line Comment" key="1" class="comment" fore="d2b48l" italic="true"/>
+			<!-- <style name="Block Comment" key="2" class="comment" /> -->
+			<style name="Identifier" key="3" class="identifier" fore="000000"/>
+			<style name="Number" key="4" class="number" fore="00008b" />
+			<style name="AHK Keywords 1" key="5" class="keyword" fore="000000"  />
+			<style name="AHK Keywords 2" key="6" class="keyword" fore="a5a200"  bold="true"/>
+			<style name="AHK Keywords 3" key="7" class="keyword" fore="ff6800"  bold="true"/>
+			<style name="AHK Keywords 4" key="8" class="keyword" fore="ff0000"  bold="true"/>
+			<style name="String" key="10" class="string" fore="009300"/>
+			<style name="String 2" key="11" class="string" fore="009300"/>
+			<style name="Special Identifier" key="13" />
+		</use-styles>
+
+		<use-keywords>
+			<keyword key="0" name="AHK Keywords 1" class="keywords1"/>
+			<keyword key="1" name="AHK Keywords 2" class="keywords2"/>
+			<keyword key="2" name="AHK Keywords 3" class="keywords3"/>
+			<keyword key="3" name="AHK Keywords 4" class="keywords4"/>
+		</use-keywords>
+
+	</schemedef>
+</Scheme>

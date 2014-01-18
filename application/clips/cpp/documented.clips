@@ -1,0 +1,236 @@
+<!--
+	Several documentation clips based on capabilities of 
+	Doxygen 1.7.5.1
+
+
+
+	Doxygen 1.7.5.1 incorrectly parses the commands:
+
+	@param
+	@exception
+	
+	Thus an empty line after these commands is necessary
+	to avoid incorrect default output. This workaround
+	will generate warnings when Doxygen is run, however.
+	(This limitation only occurs if the commands are left
+	blank.  When actually filled in, there is no problem.)
+-->
+
+<clips name="Documentation Clips">
+
+<clip name="ALL SECTION TAGS" shortcut="dall">/**
+ * @brief ${1:description}
+ * @details 
+ * @param 
+ *
+ * @return 
+ * @exception 
+ *
+ * @author 
+ * @version 
+ * @date 
+ * @copyright 
+ * @see 
+ * @remark 
+ * @note 
+ * @warning 
+ * @attention 
+ * @pre 
+ * @post 
+ * @invariant 
+ * @deprecated 
+ * @todo 
+ * @test 
+ * @bug 
+ */</clip>
+
+<clip name="doc file header" shortcut="dfh">/**
+ * @file ${PN_FILENAME}
+ * @brief ${1:file description}
+ *
+ * @author 
+ * @version 
+ * @date 
+ * @copyright 
+ */
+
+$0</clip>
+
+<clip name="doc class" shortcut="dcl">/**
+ * @brief ${1:class description}
+ */
+class ${2:name} {
+public:
+	$0
+protected:
+	
+private:
+	
+}; // end class $2
+
+</clip>
+
+<clip name="doc function" shortcut="dfn">/**
+ * @brief ${1:function description}
+ */
+${2:void} ${3:name}(${4:/*parameters*/});
+
+$0</clip>
+
+<clip name="doc function (full)" shortcut="dfnf">/**
+ * @brief ${1:function description}
+ *
+ * 
+ * @param 
+ *
+ * @return 
+ */
+${2:void} ${3:name}(${4:/*parameters*/});
+
+$0</clip>
+
+<clip name="doc function body" shortcut="dfnb">/**
+ * @brief ${1:function description}
+ */
+${2:void} ${3:name}(${4:/*parameters*/}) {
+	$0
+} // end function $3
+
+</clip>
+
+<clip name="doc struct" shortcut="dst">/**
+ * @brief ${1:struct description}
+ */
+struct ${2:name} {
+	$0
+}; // end struct $2
+
+</clip>
+
+<clip name="doc enum" shortcut="den">/**
+ * @brief ${1:enum description}
+ */
+enum ${2:name} {
+	${3:/*values*/};
+}; // end enum $2
+
+$0</clip>
+
+<clip name="doc typedef" shortcut="dtd">/**
+ * @brief ${1:typedef description}
+ */
+typedef ${2:expression} ${3:name};
+
+$0</clip>
+
+<clip name="doc define" shortcut="ddef">/**
+ * @brief ${1:define description}
+ */
+#define ${2:NAME} ${3:VALUE}
+
+$0</clip>
+
+<clip name="doc an existing decl" shortcut="ddd">/**
+ * @brief ${1:description}$0
+ */</clip>
+
+<clip name="doc namespace" shortcut="dns">/**
+ * @brief ${1:namespace description}
+ */
+namespace ${2:name} {
+	$0
+} // end namespace $2
+
+</clip>
+
+<clip name="short an existing decl" shortcut="sss">/// @brief ${1:description}</clip>
+
+<clip name="short class" shortcut="scl">/// ${1:class description}
+class ${2:name} {
+public:
+	$0
+protected:
+	
+private:
+	
+}; // end class $2
+
+</clip>
+
+<clip name="short function" shortcut="sfn">/// ${1:function description}
+${2:void} ${3:name}(${4:/*parameters*/});
+
+$0</clip>
+
+<clip name="short function body" shortcut="sfnb">/// ${1:function description}
+${2:void} ${3:name}(${4:/*parameters*/}) {
+	$0
+} // end function $3
+
+</clip>
+
+<clip name="short struct" shortcut="sst">/// ${1:struct description}
+struct ${2:name} {
+	$0
+}; // end struct $2
+
+</clip>
+
+<clip name="short enum" shortcut="sen">/// ${1:enum description}
+enum ${2:name} {
+	${3:/*values*/};
+}; // end enum $2
+
+$0</clip>
+
+<clip name="short typedef" shortcut="std">/// ${1:typedef description}
+typedef ${2:expression} ${3:name};
+
+$0</clip>
+
+<clip name="short define" shortcut="sdef">/// ${1:define description}
+#define ${2:NAME} ${3:VALUE}
+
+$0</clip>
+
+<clip name="short namespace" shortcut="sns">/// ${1:namespace description}
+namespace ${2:name} {
+	$0
+} // end namespace $2
+
+</clip>
+
+
+<!-- 
+	Some extra sectioning comment lines.
+-->
+
+<clip name="xDependencies" shortcut="dep">// -----------------------------------------------------Dependencies:
+
+$0</clip>
+
+<clip name="xInterface" shortcut="inter">// --------------------------------------------------------Interface:
+
+$0</clip>
+
+<clip name="xImplementation" shortcut="imp">// ---------------------------------------------------Implementation:
+
+$0</clip>
+
+<clip name="xGlobals" shortcut="glo">// ----------------------------------------------------------Globals:
+
+$0</clip>
+
+<clip name="xExterns" shortcut="ext">// ----------------------------------------------------------Externs:
+
+$0</clip>
+
+<clip name="xMacros" shortcut="mac">// -----------------------------------------------Defines and Macros:
+
+$0</clip>
+
+<clip name="xEOL" shortcut="eol">// -----------------------------------------------------------------:
+
+$0</clip>
+
+</clips>
